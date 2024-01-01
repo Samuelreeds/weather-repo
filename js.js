@@ -4,9 +4,11 @@ const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const error404 = document.querySelector(".not-found");
 const cityHide = document.querySelector(".city-hide");
+require('dotenv').config();
+
 
 search.addEventListener("click", () => {
-  const APIkey = "8397d8293eeb2fb758199e973a13555a";
+  const APIkey = process.env.APIkey;
   const city = document.querySelector(".search-box input").value;
 
   if (city == "") 
